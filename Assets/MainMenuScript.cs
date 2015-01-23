@@ -7,4 +7,9 @@ public class MainMenuScript : MonoBehaviour {
 	{
 		Application.LoadLevel (sceneName);
 	}
+
+	public void Exit()
+	{
+		Application.Quit ();
+	}
 }
