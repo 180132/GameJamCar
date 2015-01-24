@@ -43,11 +43,11 @@ public class ConsoleScript : MonoBehaviour {
 		GameObject.Find("Button" + numberOfButton).GetComponent<Button>().image.enabled = true;
 		GameObject.Find ("Button" + numberOfButton + "_Text").GetComponent<Text> ().text = textOnButton;
 		GameObject.Find ("Button" + numberOfButton).GetComponent<Button> ().onClick.AddListener(() => {
-			if(scenariusze.getAnswer(scenarioElement,numberOfButton).Equals("Drive...")){
-				MovePoints.ruch = true; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton));
+			if(scenariusze.getAnswer(scenarioElement,numberOfButton-1).Equals("Drive...")){
+				MovePoints.ruch = true; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton-1));
 			}
 			else{
-				MovePoints.ruch = false; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton));
+				MovePoints.ruch = false; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton-1));
 				//Application.LoadLevel(Game Over Screen);
 			}
 		}); 

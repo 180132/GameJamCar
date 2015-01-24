@@ -18,6 +18,7 @@ public class Scenario : MonoBehaviour {
 			{"","Lewo","","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
 			{"","","Prosto","Prawo"},
+			{"","","Prosto","Prawo"},
 			{"","Lewo","Prosto",""},
 			{"","Lewo","","Prawo"},
 			{"","Zadzwoń do Spierka","",""},
@@ -29,23 +30,27 @@ public class Scenario : MonoBehaviour {
 			{"Samochód ci wybuchł","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
+			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
+			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
+			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
+			{"","Drive...",""},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
+			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
+
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
+			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
 			
 			
 		};
 	}
 	public string getElement(int first, int second){
+		Debug.Log (first + "  " + second);
 		return scenariusz[first, second];
 	}
 
 	public string getAnswer(int first, int second){
+
 		return odpowiedzi[first, second];
 	}
 		
