@@ -3,7 +3,10 @@ using System.Collections;
 
 
 public class EventHandler : MonoBehaviour {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 	// Use this for initialization
 	void Start () {
