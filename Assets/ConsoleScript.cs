@@ -30,68 +30,37 @@ public class ConsoleScript : MonoBehaviour {
 
 				}		
 		OnEnable ();
-		GameObject.Find ("Button" + 1).GetComponent<Button>().image.enabled = true;
-		GameObject.Find ("Button" + 1 + "_Text").GetComponent<Text>().text = "Opcja1";
-		if (GameObject.Find ("Button" + 1).GetComponent<Button> ()) {
-			Debug.Log ("Obsługa przycisku");
-				}
 	}
 	
 	// Update is called once per frame
 
 	void Update () {
-		if(!Input.GetKeyDown(KeyCode.Return)){
-			addElements (size++,sytuacja);
 
-		}
 	}
 
-	bool addElements(int size, string scenariusz){
-				if (size < scenariusz.Length) {
-		
-			tmp = "";
-						int zm = 0;
-			while((zm++)<size)tmp += scenariusz[zm];
-						
-						text.text = tmp;
-			if(scenariusz [size].Equals('?')){
-				createButtons (scenariusz, size);
-				size=scenariusz.Length;
-			}
-		} 
-		return true;
-		}
 
-	void createButtons(string scenariusz, int size){
-
-		for (int index=0; index < howMany(scenariusz); index++) {
-			string tymczasowy_tekst_buttona="";
-			for (int j = size+1; !scenariusz[j].Equals('|'); j++) {
-				tymczasowy_tekst_buttona+=scenariusz[j];
-
-				size++;
-			}
-		
-			GameObject.Find("Button1").GetComponent<Text>().text="Opcja1";
-		}
-	}
-	
-	int howMany(string tekst_scenariusza){
-		int quantity=0;
-			for(int index=0; index < tekst_scenariusza.Length; index++){
-			if(tekst_scenariusza[index].Equals('|'))
-			{
-				quantity++;
-			}
-		}
-
-		return quantity;
-	}
-	public void createButton(int numberOfButton, string textOnButton){
+	public void createButton(int numberOfButton, string textOnButton, int scenarioElement){
 		GameObject.Find("Button" + numberOfButton).GetComponent<Button>().image.enabled = true;
 		GameObject.Find ("Button" + numberOfButton + "_Text").GetComponent<Text> ().text = textOnButton;
-		Debug.Log ("Test");
+		GameObject.Find ("Button" + numberOfButton).GetComponent<Button> ().onClick.AddListener(() => {
+			if(scenariusze.getAnswer(scenarioElement,numberOfButton).Equals("Drive...")){
+				MovePoints.ruch = true; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton));
+			}
+			else{
+				MovePoints.ruch = false; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton));
+				//Application.LoadLevel(Game Over Screen);
+			}
+		}); 
+
 	}
+
+	void deleteButtons(string newText){
+		for (int i=1; i<=6; i++) {
+			GameObject.Find ("Button" + i).GetComponent<Button>().image.enabled = false;
+			GameObject.Find ("Button" + i + "_Text").GetComponent<Text>().text = "";
+			setText (newText);
+		}	
+		}
 
 	public void OnEnable(){
 		MovePoints.collision += createEvent;
@@ -114,14 +83,14 @@ public class ConsoleScript : MonoBehaviour {
 		}
 
 	public void createEvent(){
-		Debug.Log (scenariusze.getElement(0,1));
+		setText(scenariusze.getElement(scen,0));
 		for (int element=1; element<=3; element++) {
-			createButton (element, scenariusze.getElement(0,element));
+
+			if(!scenariusze.getElement (scen,element).Equals("")) createButton (element, scenariusze.getElement(scen,element),scen);
 				}
 
 
+
 	}
-
-
-
+	
 }

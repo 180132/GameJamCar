@@ -12,6 +12,7 @@ public class Scenario : MonoBehaviour {
 			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
+			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto",""},
 			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","","Prawo"},
@@ -42,6 +43,10 @@ public class Scenario : MonoBehaviour {
 	}
 	public string getElement(int first, int second){
 		return scenariusz[first, second];
+	}
+
+	public string getAnswer(int first, int second){
+		return odpowiedzi[first, second];
 	}
 		
 
