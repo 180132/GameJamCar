@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ConsoleScript : MonoBehaviour {
-	string sytuacja = "$What do we do now? skręć w lewo | jedz prosto | skręć w prawo |";
+	string sytuacja = "$What do we do now?";
 	string tmp;
 	public Text text;
 	int obliczenia;
@@ -11,35 +11,16 @@ public class ConsoleScript : MonoBehaviour {
 	int size;
 	bool isAllText;
 	Text button;
-	ArrayList listOfButtons;
-	ArrayList listOfButtonsTexts;
-	Button button1;
-	Button button2;
-	Button button3;
-	Button button4;
-	Button button5;
-	Button button6;
-	Text Button1_Text;
-	Text Button2_Text;
-	Text Button3_Text;
-	Text Button4_Text;
-	Text Button5_Text;
-	Text Button6_Text;
-
-
-
+	
 	// Use this for initialization
 	void Start () {
 		text = GameObject.Find("Konsola").GetComponent<Text>();
 		obliczenia = 0;
 		size = 0;
 		for (int i=1; i<=6; i++) {
-		//	string temporary = "button" + (i+1);
-			  GameObject.Find ("Button" + i).GetComponent<Button>().image.enabled = false;
+			GameObject.Find ("Button" + i).GetComponent<Button>().image.enabled = false;
+			GameObject.Find ("Button" + i + "_Text").GetComponent<Text>().text = "";
 
-			//	Color c = img.color;
-				//	c.a = 0;
-				//	img.color = c;
 				}		
 	
 	}
