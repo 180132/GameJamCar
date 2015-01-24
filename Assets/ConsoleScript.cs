@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ConsoleScript : MonoBehaviour {
+	public static int scen;
 	string sytuacja = "$What do we do now?";
 	string tmp;
 	public Text text;
@@ -11,9 +12,12 @@ public class ConsoleScript : MonoBehaviour {
 	int size;
 	bool isAllText;
 	Text button;
+	Scenario scenariusze;
 	
 	// Use this for initialization
 	void Start () {
+		scenariusze = new Scenario ();
+		scen = 0;
 		text = GameObject.Find("Konsola").GetComponent<Text>();
 		obliczenia = 0;
 		size = 0;
@@ -23,7 +27,11 @@ public class ConsoleScript : MonoBehaviour {
 
 				}		
 		OnEnable ();
-	
+		GameObject.Find ("Button" + 1).GetComponent<Button>().image.enabled = true;
+		GameObject.Find ("Button" + 1 + "_Text").GetComponent<Text>().text = "Opcja1";
+		if (GameObject.Find ("Button" + 1).GetComponent<Button> ()) {
+			Debug.Log ("Obsługa przycisku");
+				}
 	}
 	
 	// Update is called once per frame
@@ -76,16 +84,41 @@ public class ConsoleScript : MonoBehaviour {
 
 		return quantity;
 	}
-	public void createButton(){
-		GameObject.Find("Button" + 1).GetComponent<Button>().image.enabled = true;
-		GameObject.Find ("Button" + 1 + "_Text").GetComponent<Text> ().text = "Testowy_text";
+	public void createButton(int numberOfButton, string textOnButton){
+		GameObject.Find("Button" + numberOfButton).GetComponent<Button>().image.enabled = true;
+		GameObject.Find ("Button" + numberOfButton + "_Text").GetComponent<Text> ().text = textOnButton;
 		Debug.Log ("Test");
 	}
 
 	public void OnEnable(){
-		MovePoints.collision += createButton;
+		MovePoints.collision += createEvent;
 	}
 	public void OnDisable(){
-		MovePoints.collision -= createButton;
+		MovePoints.collision -= createEvent;
 	}
+
+
+	public void setText(string newText){
+		tmp = "";
+		text.text = "";
+		for (int index=0; index< newText.Length; index++) {
+			if(index%1==0){
+				tmp+=newText[index];
+				text.text = tmp;
+			}
+
+		}
+		}
+
+	public void createEvent(){
+		Debug.Log (scenariusze.getElement(0,1));
+		for (int element=1; element<=3; element++) {
+			createButton (element, scenariusze.getElement(0,element));
+				}
+
+
+	}
+
+
+
 }
