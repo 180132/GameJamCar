@@ -83,9 +83,9 @@ public class ConsoleScript : MonoBehaviour {
 	}
 
 	public void OnEnable(){
-		MovePoints.collision += createButton();
+		MovePoints.collision += createButton;
 	}
 	public void OnDisable(){
-		MovePoints.collision -= createButton();
+		MovePoints.collision -= createButton;
 	}
 }
