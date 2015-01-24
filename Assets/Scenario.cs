@@ -18,9 +18,8 @@ public class Scenario : MonoBehaviour {
 			{"","Lewo","","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
 			{"","","Prosto","Prawo"},
-			{"","","Prosto","Prawo"},
 			{"","Lewo","Prosto",""},
-			{"","Lewo","","Prawo"},
+			{"","","Prosto","Prawo"},
 			{"","Zadzwoń do Spierka","",""},
 		};
 
@@ -35,9 +34,7 @@ public class Scenario : MonoBehaviour {
 			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
 			{"","Drive...",""},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
-
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
 			
