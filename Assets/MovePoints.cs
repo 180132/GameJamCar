@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class MovePoints : MonoBehaviour {
+	public delegate void handler();
+	apublic static event handler collision;
+
 	public GameObject waypointA;
 	public GameObject waypointB;
 	public GameObject waypointC;
@@ -22,7 +25,12 @@ public class MovePoints : MonoBehaviour {
 		   p == destination.transform.position && directionAB == true)
 		{
 			if(p == destination.transform.position)
+			{
+
 				changeDir();
+				if(collision!= NULL)
+					collision();
+			}
 		}
 		if (distanceCheck() == false)
 			Debug.Log("w zaSIEGU");
