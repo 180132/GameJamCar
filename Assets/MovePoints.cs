@@ -4,10 +4,11 @@ using System.Collections;
 public class MovePoints : MonoBehaviour {
 	public delegate void handler();
 	public static event handler collision;
-	public static boolean ruch;
+	public static bool ruch;
 	public GameObject waypointA;
 	public GameObject waypointB;
 	public GameObject waypointC;
+	public GameObject waypointD;
 	public float speed = 1;
 	private bool directionAB = true;
 	private GameObject destination;
@@ -29,7 +30,7 @@ public class MovePoints : MonoBehaviour {
 
 				changeDir();
 				if(collision!= null){
-					Debug.Log (ConsoleScript.a); 
+					Debug.Log (""); 
 					collision();
 				}
 			}
