@@ -22,9 +22,9 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1789)
 
-UnloadTime: 3.573109 ms
+UnloadTime: 3.625006 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 141.
-Total: 0.912815 ms (FindLiveObjects: 0.008649 ms CreateObjectMapping: 0.012047 ms MarkObjects: 0.181327 ms  DeleteObjects: 0.004633 ms)
+Total: 0.684534 ms (FindLiveObjects: 0.008031 ms CreateObjectMapping: 0.010193 ms MarkObjects: 0.151054 ms  DeleteObjects: 0.005251 ms)
 
