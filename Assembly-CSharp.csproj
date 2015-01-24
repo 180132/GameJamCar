@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\ConsoleScript.cs" />
      <Compile Include="Assets\MainMenuScript.cs" />
+     <Compile Include="Assets\Scenario.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
