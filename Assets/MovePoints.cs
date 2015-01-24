@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MovePoints : MonoBehaviour {
 	public delegate void handler();
-	apublic static event handler collision;
+	public static event handler collision;
 
 	public GameObject waypointA;
 	public GameObject waypointB;
@@ -15,7 +15,6 @@ public class MovePoints : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		destination = waypointB;
-
 	}
 	
 	// Update is called once per frame
@@ -28,7 +27,7 @@ public class MovePoints : MonoBehaviour {
 			{
 
 				changeDir();
-				if(collision!= NULL)
+				if(collision!= null)
 					collision();
 			}
 		}
