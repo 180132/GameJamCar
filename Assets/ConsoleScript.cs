@@ -3,11 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ConsoleScript : MonoBehaviour {
-<<<<<<< HEAD
-	public static int a;
-=======
+
 	public static int scen;
->>>>>>> origin/master
+
 	string sytuacja = "$What do we do now?";
 	string tmp;
 	public Text text;
@@ -20,12 +18,9 @@ public class ConsoleScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-<<<<<<< HEAD
-		a = 0;
-=======
+
 		scenariusze = new Scenario ();
 		scen = 0;
->>>>>>> origin/master
 		text = GameObject.Find("Konsola").GetComponent<Text>();
 		obliczenia = 0;
 		size = 0;
