@@ -22,6 +22,7 @@ public class ConsoleScript : MonoBehaviour {
 			GameObject.Find ("Button" + i + "_Text").GetComponent<Text>().text = "";
 
 				}		
+		OnEnable ();
 	
 	}
 	
@@ -36,7 +37,7 @@ public class ConsoleScript : MonoBehaviour {
 
 	bool addElements(int size, string scenariusz){
 				if (size < scenariusz.Length) {
-			Debug.Log(scenariusz [size]);
+		
 			tmp = "";
 						int zm = 0;
 			while((zm++)<size)tmp += scenariusz[zm];
@@ -59,7 +60,7 @@ public class ConsoleScript : MonoBehaviour {
 
 				size++;
 			}
-			Debug.Log ("tmp: " + tymczasowy_tekst_buttona);
+		
 			GameObject.Find("Button1").GetComponent<Text>().text="Opcja1";
 		}
 	}
@@ -72,9 +73,19 @@ public class ConsoleScript : MonoBehaviour {
 				quantity++;
 			}
 		}
-		Debug.Log ("Quantity: " + quantity);
+
 		return quantity;
 	}
+	public void createButton(){
+		GameObject.Find("Button" + 1).GetComponent<Button>().image.enabled = true;
+		GameObject.Find ("Button" + 1 + "_Text").GetComponent<Text> ().text = "Testowy_text";
+		Debug.Log ("Test");
+	}
 
-	
+	public void OnEnable(){
+		MovePoints.collision += createButton();
+	}
+	public void OnDisable(){
+		MovePoints.collision -= createButton();
+	}
 }
