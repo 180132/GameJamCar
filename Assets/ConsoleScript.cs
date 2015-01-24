@@ -19,7 +19,7 @@ public class ConsoleScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (size < sytuacja.Length) {
-			if((obliczenia++)%3==0){
+			if((obliczenia++)%2==0){
 				tmp+=sytuacja[size];
 				text.text=tmp;
 				size++;

@@ -12,7 +12,7 @@ Platform assembly: D:\GameTheftJam\GameJamCar\GameTheftJam_Data\Managed\Assembly
 Loading D:\GameTheftJam\GameJamCar\GameTheftJam_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\GameTheftJam\GameJamCar\GameTheftJam_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\GameTheftJam\GameJamCar\GameTheftJam_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.057 seconds
+- Completed reload, in  0.059 seconds
 desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -22,9 +22,9 @@ The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1789)
 
-UnloadTime: 3.625006 ms
+UnloadTime: 3.750421 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 141.
-Total: 0.684534 ms (FindLiveObjects: 0.008031 ms CreateObjectMapping: 0.010193 ms MarkObjects: 0.151054 ms  DeleteObjects: 0.005251 ms)
+Total: 0.724692 ms (FindLiveObjects: 0.025330 ms CreateObjectMapping: 0.010193 ms MarkObjects: 0.142405 ms  DeleteObjects: 0.005869 ms)
 
