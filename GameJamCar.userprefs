@@ -1,16 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ConsoleScript.cs">
-    <Files>
-      <File FileName="Assets\ConsoleScript.cs" Line="24" Column="14" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MovePoints.cs">
     <Files>
-      <File FileName="Assets\ConsoleScript.cs" Line="128" Column="1" />
-      <File FileName="Assets\MovePoints.cs" Line="11" Column="30" />
->>>>>>> origin/master
+      <File FileName="Assets\MovePoints.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
