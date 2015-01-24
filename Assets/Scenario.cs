@@ -3,13 +3,5 @@ using System.Collections;
 
 public class Scenario : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	string scenariusz1 = "$What do we do now? skręć w lewo | jedz prosto | skręć w prawo |";
 }
