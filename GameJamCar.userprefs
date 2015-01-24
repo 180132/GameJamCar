@@ -1,16 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scenario.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EventHandler.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\ConsoleScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\EventHandler.cs" Line="17" Column="1" />
-      <File FileName="Assets\MovePoints.cs" Line="127" Column="1" />
-=======
-      <File FileName="Assets\ConsoleScript.cs" Line="46" Column="50" />
-      <File FileName="Assets\EventHandler.cs" Line="17" Column="1" />
-      <File FileName="Assets\Scenario.cs" Line="48" Column="37" />
->>>>>>> origin/master
+      <File FileName="Assets\EventHandler.cs" Line="18" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
