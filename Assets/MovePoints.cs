@@ -92,24 +92,20 @@ public class MovePoints : MonoBehaviour {
 			ConsoleScript.scen = 8;
 						destination = waypointJ;
 				} else 
-											if (destination.transform.position == waypointI.transform.position) {
+											if (destination.transform.position == waypointJ.transform.position) {
 			ConsoleScript.scen = 9;
-						destination = waypointJ;
-				} else
-												if (destination.transform.position == waypointJ.transform.position) {
-			ConsoleScript.scen = 10;
 						destination = waypointK;
 				} else
-													if (destination.transform.position == waypointK.transform.position) {
-			ConsoleScript.scen = 11;
+												if (destination.transform.position == waypointK.transform.position) {
+			ConsoleScript.scen = 10;
 						destination = waypointL;
 				} else
-														if (destination.transform.position == waypointL.transform.position) {
-			ConsoleScript.scen = 12;
+													if (destination.transform.position == waypointL.transform.position) {
+			ConsoleScript.scen = 11;
 						destination = waypointM;
-				}
-															if (destination.transform.position == waypointL.transform.position) {
-			ConsoleScript.scen = 13;
+				} else
+														if (destination.transform.position == waypointM.transform.position) {
+			ConsoleScript.scen = 12;
 				}
 											
 	}	
