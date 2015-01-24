@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ConsoleScript : MonoBehaviour {
+	public static int a;
 	string sytuacja = "$What do we do now?";
 	string tmp;
 	public Text text;
@@ -14,6 +15,7 @@ public class ConsoleScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		a = 0;
 		text = GameObject.Find("Konsola").GetComponent<Text>();
 		obliczenia = 0;
 		size = 0;

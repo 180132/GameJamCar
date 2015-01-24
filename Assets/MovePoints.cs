@@ -4,7 +4,7 @@ using System.Collections;
 public class MovePoints : MonoBehaviour {
 	public delegate void handler();
 	public static event handler collision;
-
+	public static boolean ruch;
 	public GameObject waypointA;
 	public GameObject waypointB;
 	public GameObject waypointC;
@@ -14,7 +14,8 @@ public class MovePoints : MonoBehaviour {
 	public float distance = 30;
 	// Use this for initialization
 	void Start () {
-		destination = waypointB;
+		destination = waypointA;
+		ruch = true;
 	}
 	
 	// Update is called once per frame
@@ -27,8 +28,10 @@ public class MovePoints : MonoBehaviour {
 			{
 
 				changeDir();
-				if(collision!= null)
+				if(collision!= null){
+					Debug.Log (ConsoleScript.a); 
 					collision();
+				}
 			}
 		}
 		if (distanceCheck() == false)
@@ -41,14 +44,14 @@ public class MovePoints : MonoBehaviour {
 
 
 	void changeDir() {
-		if(destination.transform.position == waypointB.transform.position)
-			destination = waypointC;
+		if(destination.transform.position == waypointA.transform.position)
+			destination = waypointB;
 		else
-			if (destination.transform.position == waypointC.transform.position)
-				destination = waypointA;
+			if (destination.transform.position == waypointB.transform.position)
+				destination = waypointC;
 			else
-				if (destination.transform.position == waypointA.transform.position)
-					destination = waypointB;
+				if (destination.transform.position == waypointC.transform.position)
+					destination = waypointD;
 	}
 
 

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ConsoleScript.cs" />
+     <Compile Include="Assets\EventsHandler.cs" />
      <Compile Include="Assets\MainMenuScript.cs" />
      <Compile Include="Assets\MovePoints.cs" />
      <Compile Include="Assets\Scenario.cs" />
