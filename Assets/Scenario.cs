@@ -42,12 +42,12 @@ public class Scenario : MonoBehaviour {
 		};
 	}
 	public string getElement(int first, int second){
-		Debug.Log (first + "  " + second);
+
 		return scenariusz[first, second];
 	}
 
 	public string getAnswer(int first, int second){
-
+		Debug.Log ("Pytanie: " + first + "  " + second);
 		return odpowiedzi[first, second];
 	}
 		
