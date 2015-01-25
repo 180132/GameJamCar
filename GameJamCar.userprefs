@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\EventHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MovePoints.cs">
     <Files>
-      <File FileName="Assets\EventHandler.cs" Line="18" Column="1" />
+      <File FileName="Assets\MovePoints.cs" Line="59" Column="40" />
+      <File FileName="Assets\MovePoints.cs" Line="151" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

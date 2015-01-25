@@ -19,39 +19,59 @@ public class MovePoints : MonoBehaviour {
 	public GameObject waypointL;
 	public GameObject waypointM;
 
-
+	private Vector2 vectorRuchu;
+	private Vector2 vectorPoprzedni;
 	public float speed = 1;
-	private bool directionAB = true;
+	private bool beginning;
 	private GameObject destination;
 	public float distance = 30;
 	// Use this for initialization
 	void Start () {
 		destination = waypointA;
 		ruch = true;
+		beginning = true;
+		vectorPoprzedni = new Vector2 (0, 1);
+		calculateVRuchu ();
+		//Debug.Log (destination.transform.position.x);
+		//Debug.Log (destination.transform.position.y);
+		//Debug.Log (this.transform.position.x);
+		//Debug.Log (this.transform.position.y);
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector3 p = this.transform.position;
-		if(p == waypointA.transform.position && directionAB == false ||
-		   p == destination.transform.position && directionAB == true)
+		if(p == destination.transform.position)
 		{
-			if(p == destination.transform.position)
+			if(p == destination.transform.position && ruch == true)
 			{
 				ruch = false;
 				changeDir();
 				if(collision!= null){
 					collision();
-
+					beginning = true;
 				}
+				//beginning = true;
 			}
 		}
 		if (distanceCheck() == false)
 			Debug.Log("w zaSIEGU");
-		if(ruch)
+		if (beginning == true && ruch == true) {
+			Debug.Log("rotacja");
+			this.transform.Rotate(Vector3.forward, Vector2.Angle(vectorPoprzedni, vectorRuchu));
+
+		}
+		if (ruch)
+						//this.transform.Rotate (0, 0, 10);
 			this.transform.position = Vector3.MoveTowards (this.transform.position, 
 			                                              destination.transform.position,
 		                                              speed * Time.fixedDeltaTime);
+		//if (p == destination.transform.position) {
+		//	Debug.Log ("zmiana beginning");
+		//	beginning = true;
+		//}
+		//else
+			beginning = false;
 	}
 
 
@@ -121,6 +141,10 @@ public class MovePoints : MonoBehaviour {
 			return true;
 		else
 			return false;
+	}
+	void calculateVRuchu()
+	{
+		vectorRuchu = new Vector2 (destination.transform.position.x - this.transform.position.x, destination.transform.position.y - this.transform.position.y);
 	}
 
 }
