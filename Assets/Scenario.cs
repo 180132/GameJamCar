@@ -8,8 +8,8 @@ public class Scenario : MonoBehaviour {
 
 	public Scenario(){
 		scenariusz = new string[,]{
-			{"","Lewo","Prosto","Prawo"},
-			{"","Lewo","Prosto","Prawo"},
+			{"Jedziesz ulicą Politechniki. Zgraje studentów wracają w godzinach szczytu.","Lewo","Prosto","Prawo"},
+			{"Jedziesz ulicą Tymienieckiego. ","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
 			{"","Lewo","Prosto","Prawo"},
@@ -24,8 +24,8 @@ public class Scenario : MonoBehaviour {
 		};
 
 		odpowiedzi = new string[,]{
-			{"Wyjechałeś z miasta, game jam się skończy zanim wrócisz! Przecież to Łódź w godzinach szczytu","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"Drive...","Złapali narkomanów(trzynastolatków) którzy posiadali 0.1 grama, policja zablokowała przejazd","Wpadłeś w dziure"},
+			{"Wyjechałeś z miasta, game jam się skończy zanim wrócisz! Przecież to Łódź w godzinach szczytu","Na następnym zakręcie musisz skręcić w lewo, więc już nie zdążysz na game jam","Drive..."},
+			{"Drive...","Złapali narkomanów(trzynastolatków) którzy posiadali 0.1 grama, policja zablokowała przejazd","Wpadłeś w i urwało ci koło. :("},
 			{"Samochód ci wybuchł","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
