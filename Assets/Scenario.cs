@@ -36,7 +36,7 @@ public class Scenario : MonoBehaviour {
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
 			{"Drive...","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
 			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!","Drive..."},
-			{"","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
+			{"Dzwonisz do Spierka","Jesteś na ulicy Politechniki, student wpadł ci pod koła, game over!",""},
 			
 			
 		};
