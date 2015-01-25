@@ -48,6 +48,7 @@ public class MovePoints : MonoBehaviour {
 				ruch = false;
 				changeDir();
 				if(collision!= null){
+					Debug.Log("wywolanie");
 					collision();
 					beginning = true;
 				}

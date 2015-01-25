@@ -43,6 +43,7 @@ public class ConsoleScript : MonoBehaviour {
 		GameObject.Find("Button" + numberOfButton).GetComponent<Button>().image.enabled = true;
 		GameObject.Find ("Button" + numberOfButton + "_Text").GetComponent<Text> ().text = textOnButton;
 		GameObject.Find ("Button" + numberOfButton).GetComponent<Button> ().onClick.AddListener(() => {
+			Debug.Log("Tekst");
 			if(scenariusze.getAnswer(scenarioElement,numberOfButton-1).Equals("Drive...")){
 				MovePoints.ruch = true; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton-1));
 			}
