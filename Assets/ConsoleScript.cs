@@ -8,19 +8,24 @@ public class ConsoleScript : MonoBehaviour {
 
 	string sytuacja = "$What do we do now?";
 	string tmp;
-	public Text text;
+	public static Text text;
 	int obliczenia;
 	int zm;
+	float timerWin;
+	float timerLose;
 	int size;
 	bool isAllText;
 	Text button;
 	Scenario scenariusze;
-	
-	// Use this for initialization
-	void Start () {
+	public int scenId;
 
-		scenariusze = new Scenario ();
+	void Start () {
+		Debug.Log ("Załączam się");
+		scenId = -1;
+		scenariusze = gameObject.AddComponent<Scenario>();
 		scen = 0;
+		timerWin = -1;
+		timerLose = -1;
 		text = GameObject.Find("Konsola").GetComponent<Text>();
 		obliczenia = 0;
 		size = 0;
@@ -35,24 +40,52 @@ public class ConsoleScript : MonoBehaviour {
 	// Update is called once per frame
 
 	void Update () {
+		if (timerWin > 0) {
+			timerWin-=Time.deltaTime;
+				}
+		if (timerWin <= 0 && timerWin > -1) {
+			Application.LoadLevel("Win");
+		}
 
+		if (timerLose > 0) {
+			timerLose-=Time.deltaTime;
+		}
+		if (timerLose <= 0 && timerLose > -1) {
+			Application.LoadLevel("Game Over Screen");
+		}
 	}
 
 
-	public void createButton(int numberOfButton, string textOnButton, int scenarioElement){
+	public void createButton(int numberOfButton, string textOnButton){
 		GameObject.Find("Button" + numberOfButton).GetComponent<Button>().image.enabled = true;
 		GameObject.Find ("Button" + numberOfButton + "_Text").GetComponent<Text> ().text = textOnButton;
 		GameObject.Find ("Button" + numberOfButton).GetComponent<Button> ().onClick.AddListener(() => {
 			Debug.Log("Tekst");
-			if(scenariusze.getAnswer(scenarioElement,numberOfButton-1).Equals("Drive...")){
-				MovePoints.ruch = true; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton-1));
+			string answer = scenariusze.getAnswer(scenId,numberOfButton-1);
+			if(answer.Equals("Drive...")){
+				MovePoints.ruch = true; deleteButtons (answer);
 			}
 			else{
-				MovePoints.ruch = false; deleteButtons (scenariusze.getAnswer(scenarioElement,numberOfButton-1));
-				//Application.LoadLevel(Game Over Screen);
+				MovePoints.ruch = false; deleteButtons (answer);
+				if(answer.Equals("Dzwonisz do Spierka")){
+					timerWin = 3f;
+					//Application.LoadLevel("Win");
+
+				}
+				else{ 
+					timerLose = 3f;
+				
+				}
 			}
 		}); 
+	}
 
+	public void GoToGameOver(){
+		Application.LoadLevel("Game Over Screen");
+	}
+
+	public void GoToWin(){
+		Application.LoadLevel("Win");
 	}
 
 	void deleteButtons(string newText){
@@ -84,10 +117,11 @@ public class ConsoleScript : MonoBehaviour {
 		}
 
 	public void createEvent(){
-		setText(scenariusze.getElement(scen,0));
+		scenId = scen;
+		setText(scenariusze.getElement(scenId,0));
 		for (int element=1; element<=3; element++) {
 
-			if(!scenariusze.getElement (scen,element).Equals("")) createButton (element, scenariusze.getElement(scen,element),scen);
+			if(!scenariusze.getElement (scenId,element).Equals("")) createButton (element, scenariusze.getElement(scenId,element));
 				}
 
 
